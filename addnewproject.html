@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Test</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<script src="js/offline/jquery.min.js"></script>
+    <script src="js/offline/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/offline/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="css/offline/bootstrap.min.css">
+    <link rel="stylesheet" href="css/offline/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="css/offline/jquery-ui.css">-->
+
+    <script type="text/javascript" src="js/addnewproject.js"></script>
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Project Details</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="showdetails.html">View added project</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <img src="images/banner.jpg" class="img-responsive" alt="Banner">
+
+    <div class="container mycontainer">
+        <div class="row">
+
+
+
+            <h1 class="h1 my-heading">Add New Project</h1>
+
+            <div class="col-md-12">
+
+
+
+
+                <form  action="" method="POST" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="projectname">Project Name:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="projectname" placeholder="Enter project name" maxlength="50" required >
+                        </div>
+                    </div>
+
+                    <div id="dialog-message-name" title="Project name" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Enter valid Project Name.  Special characters are not allowed.</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="projectcode">Project Code:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="projectcode" placeholder="Enter projectcode" maxlength="50" required>
+                        </div>
+                    </div>
+                    <div id="dialog-message-code" title="Project code" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Please
+                            fill the Project Code.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="currency">Currency:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="currency" required>
+                            <option>--Select--</option>
+                            <option value="USD" >USD</option>
+                            <option value="INR" >INR</option>
+                            <option value="GBP" >GBP</option>
+                            <option value="AUD" >AUD</option>
+
+                        </select>
+                        </div>
+                    </div>
+
+                    <div id="dialog-message-currency" title="Currency" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Please
+                            select the currency.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="customer">Customer:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="customer" required>
+                            <option>--Select--</option>
+                            <option value="CodeObjects" >CodeObjects</option>
+                            <option value="Regus">Regus</option>
+                            <option value="TRL">TRL</option>
+                            <option value="Worldsmart">Worldsmart</option>
+
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="type">Type:</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="type" value="Fixed Fee" id="type">Fixed Fee
+                            <input type="radio" name="type" value="T & M" id="type">T & M
+
+                        </div>
+                    </div>
+
+                    <div id="dialog-message-type" title="Type" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Please
+                            select the type.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="manager">Manager:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="manager" placeholder="Enter the name of manager" maxlength="50" required>
+                        </div>
+                    </div>
+
+                    <div id="dialog-message-manager" title="Manager" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Please
+                            enter a valid name. Special characters are not allowed.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="projectstatus">Project Status:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="projectstatus" required>
+                            <option>--Select--</option>
+                            <option value="Yet To Start" >Yet To Start</option>
+                            <option value="In Progress" >In Progress</option>
+                            <option value="On Hold" >On Hold</option>
+                            <option value="Closed" >Closed</option>
+
+                        </select>
+                        </div>
+                    </div>
+
+                    <div id="dialog-message-status" title="Project Status" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Please
+                            select the project status.</p>
+                    </div>
+
+                    <div id="dialog-message-status-closed" title="Projrct Status" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Please
+                            select the project closure date.</p>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="projectstartdate">Project Start Date</label>
+                        <div class="col-sm-10">
+                            <div class='input-group date' id='startdatepicker'>
+                                <input type='text' class="form-control" id='projectstartdate' required/>
+                                <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="dialog-message-startdate" title="Project Start Date" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> An
+                            entry with previous start date is not allowed.</p>
+                    </div>
+
+                    <div id="dialog-message-past-startdate" title="Project Start Date" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Please
+                            select a valid project start date.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="projectenddate">Project End Date</label>
+                        <div class="col-sm-10">
+                            <div class='input-group date' id='enddatepicker'>
+                                <input type='text' class="form-control" id='projectenddate' />
+                                <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="dialog-message-submit" title="Alert" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Please
+                            enter a valid project closure date.</p>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <input id="submitbtn" type="submit" class="btn btn-danger my-button" value="Submit" />
+                            <input type="reset" class="btn btn-danger my-button" value="Reset" />
+
+
+                        </div>
+                    </div>
+                    <div id="dialog-message-confirm" title="Thank you" style="display: none !important;">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span> Click
+                            OK to confirm.</p>
+                    </div>
+                </form>
+
+                <!--<div id="dialog-message" title="Employee added successfully.">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+Employee added successfully.  </p>
+  </div>-->
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+@import "partials/base/reset";
+@import "partials/base/typography";
+@import "partials/helpers/variables";
+
+body {
+    background: $bgcolor !important;
+}
+.mycontainer {
+    padding: 30px !important;
+   
+}
+.navbar  {
+    border-radius:0px !important;
+    margin-bottom: 0px !important;
+}
+
+#dialog-message {
+  display: none;
+}
+.control-label {
+    text-align: left !important;
+}
+.my-heading {
+      border-bottom: 3px solid $bordercolor;
+    padding-bottom: 15px;
+    margin-bottom: 5% !important;
+}
+.my-button {
+        padding: 10px 40px !important;
+    border-radius: 0px !important;
+}

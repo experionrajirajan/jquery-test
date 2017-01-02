@@ -1,0 +1,27 @@
+@import "partials/helpers/variables";
+
+body {
+    background: #f9f9f9;
+}
+p {
+    line-height: 20px;
+}
+.bold-text {
+    font-weight: bold;
+}
+
+.medium-font-size {
+    font-size: 15px;
+}
+
+.condensed-text {
+    font-weight: 100;
+    color: #F3F9EC;
+    letter-spacing: -1px;
+}
+.small-font-size {
+    font-size:14px;
+}
+.light-green-text {
+    color:#508000;
+}
